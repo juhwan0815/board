@@ -1,0 +1,65 @@
+:basedir: {docdir}
+:snippets: {basedir}/build/generated-snippets
+
+= 게시판 서비스
+:doctype: board
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectnums:
+:sectlinks:
+:sectanchors:
+
+[[api]]
+==== 게시글 생성 API
+===== 요청
+include::{snippets}/board/create/http-request.adoc[]
+====== Body
+include::{snippets}/board/create/request-fields.adoc[]
+===== 응답
+include::{snippets}/board/create/http-response.adoc[]
+====== Body
+include::{snippets}/board/create/response-fields.adoc[]
+
+==== 게시글 수정 API
+===== 요청
+include::{snippets}/board/update/http-request.adoc[]
+====== Path
+include::{snippets}/board/update/path-parameters.adoc[]
+====== Body
+include::{snippets}/board/update/request-fields.adoc[]
+===== 응답
+include::{snippets}/board/update/http-response.adoc[]
+====== Body
+include::{snippets}/board/update/response-fields.adoc[]
+
+==== 게시글 삭제 API
+===== 요청
+include::{snippets}/board/delete/http-request.adoc[]
+====== Path
+include::{snippets}/board/delete/path-parameters.adoc[]
+===== 응답
+include::{snippets}/board/delete/http-response.adoc[]
+
+==== 게시글 페이징 조회 API
+===== 요청
+include::{snippets}/board/find/http-request.adoc[]
+====== Param
+include::{snippets}/board/find/request-parameters.adoc[]
+
+===== 응답
+include::{snippets}/board/find/http-response.adoc[]
+====== Body
+include::{snippets}/board/find/response-fields.adoc[]
+
+==== 게시글 단건 조회 API
+===== 요청
+include::{snippets}/board/findById/http-request.adoc[]
+====== Path
+include::{snippets}/board/findById/path-parameters.adoc[]
+
+===== 응답
+include::{snippets}/board/findById/http-response.adoc[]
+====== Body
+include::{snippets}/board/findById/response-fields.adoc[]
