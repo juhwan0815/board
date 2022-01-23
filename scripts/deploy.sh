@@ -1,4 +1,5 @@
 # 가동중인 awsstudy 도커 중단 및 삭제
+echo rjatjd0815* | docker login -u juhwan0815 --password-stdin
 sudo docker ps -a -q --filter "name=board" | grep -q . && docker stop board && docker rm board | true
 
 # 기존 이미지 삭제
