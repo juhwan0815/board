@@ -30,6 +30,12 @@ public class BoardController {
         return env.getProperty("local.server.port");
     }
 
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello";
+    }
+
+
     @PostMapping("/boards")
     public ResponseEntity<BoardResponse> create(@RequestBody @Valid BoardCreateRequest request) {
         return ResponseEntity.ok(boardService.create(request));
