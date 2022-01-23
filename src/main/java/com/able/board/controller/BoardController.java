@@ -6,6 +6,7 @@ import com.able.board.dto.BoardUpdateRequest;
 import com.able.board.service.BoardService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.env.Environment;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
@@ -22,12 +23,12 @@ import java.util.List;
 public class BoardController {
 
     private final BoardService boardService;
+    private final Environment env;
 
     @GetMapping
     public String healthCheck() {
-        return "health ok";
+        return env.getProperty("local.server.port");
     }
-
 
     @PostMapping("/boards")
     public ResponseEntity<BoardResponse> create(@RequestBody @Valid BoardCreateRequest request) {
