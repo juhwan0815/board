@@ -23,6 +23,12 @@ public class BoardController {
 
     private final BoardService boardService;
 
+    @GetMapping
+    public String healthCheck() {
+        return "health ok";
+    }
+
+
     @PostMapping("/boards")
     public ResponseEntity<BoardResponse> create(@RequestBody @Valid BoardCreateRequest request) {
         return ResponseEntity.ok(boardService.create(request));
