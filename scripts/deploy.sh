@@ -2,14 +2,14 @@
 
 echo $PASSWORD | docker login -u $USERNAME --password-stdin
 
-RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost/)
+RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost/profile)
 
 echo "> 응답 코드 $RESPONSE_CODE"
 if [ $RESPONSE_CODE -ge 400 ]
 then
     CURRENT_PORT=8082
 else
-    CURRENT_PORT=$(curl -s http://localhost/)
+    CURRENT_PORT=$(curl -s http://localhost/profile)
 fi
 
 echo "> 현재 구동중인 포트 $CURRENT_PORT"

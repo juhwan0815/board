@@ -25,7 +25,7 @@ public class BoardController {
     private final BoardService boardService;
     private final Environment env;
 
-    @GetMapping
+    @GetMapping("/profile")
     public String healthCheck() {
         return env.getProperty("local.server.port");
     }
