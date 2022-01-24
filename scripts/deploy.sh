@@ -37,7 +37,7 @@ sudo docker run -d --name $IDLE_PORT -p ${IDLE_PORT}:${IDLE_PORT} -e "server.por
 
 echo "> $IDLE_PORT 10 초 Health Check 시작"
 echo "> curl -s http://localhost:$IDLE_PORT/actuator/health "
-sleep 10
+sleep 20
 
 
 for RETRY_COUNT in {1..10}
