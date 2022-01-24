@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-ABSPATH=$(readlink -f $0)
-ABSDIR=$(dirname $ABSPATH)
-source ${ABSDIR}/switch.sh
-
 echo $PASSWORD | docker login -u $USERNAME --password-stdin
 
 RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost/)
