@@ -35,7 +35,7 @@ sudo docker pull juhwan0815/board:latest
 echo "> 도커 실행 포트:$IDLE_PORT"
 sudo docker run -d --name $IDLE_PORT -p ${IDLE_PORT}:${IDLE_PORT} -e "server.port=${IDLE_PORT}" juhwan0815/board:latest
 
-echo "> $IDLE_PORT 10 초 Health Check 시작"
+echo "> $IDLE_PORT 15 초 후 Health Check 시작"
 echo "> curl -s http://localhost:$IDLE_PORT/actuator/health "
 sleep 20
 
