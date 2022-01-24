@@ -13,10 +13,10 @@ else
 fi
 
 echo "> 현재 구동중인 포트 $CURRENT_PORT"
-if [ ${CURRENT_PORT} == 8081 ]
+if [ ${CURRENT_PORT} -eq 8081 ]
 then
     IDLE_PORT=8082
-elif [ ${CURRENT_PORT} == 8082 ]
+elif [ ${CURRENT_PORT} -eq 8082 ]
 then
     IDLE_PORT=8081
 else
